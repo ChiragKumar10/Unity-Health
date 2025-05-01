@@ -1,0 +1,18 @@
+{
+  "name": "playwright-typescript-framework",
+  "version": "1.0.0",
+  "description": "A Playwright TypeScript framework for automated testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.30.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+} 
