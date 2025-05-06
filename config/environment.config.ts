@@ -1,5 +1,6 @@
 export interface EnvironmentConfig {
-    baseUrl: string;
+    adminPortalUrl: string;
+    providerPortalUrl: string;
     apiUrl: string;
     timeout: number;
     retries: number;
@@ -7,7 +8,8 @@ export interface EnvironmentConfig {
 
 const environments: Record<string, EnvironmentConfig> = {
     qa: {
-        baseUrl: 'https://qa.unityhealth360.com',
+        adminPortalUrl: 'https://qa.unityhealth360.com/auth/login',
+        providerPortalUrl: 'https://automation.qa.unityhealth360.com/auth/login',
         apiUrl: 'https://qa-api.unityhealth360.com',
         timeout: 30000,
         retries: 2

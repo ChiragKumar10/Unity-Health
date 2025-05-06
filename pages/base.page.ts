@@ -4,15 +4,22 @@ import { Logger } from '../utils/logger';
 
 export class BasePage {
     readonly page: Page;
-    readonly baseUrl: string;
+    readonly adminPortalUrl: string;
+    readonly providerPortalUrl: string;
 
     constructor(page: Page) {
         this.page = page;
-        this.baseUrl = getEnvironmentConfig().baseUrl;
+        const config = getEnvironmentConfig();
+        this.adminPortalUrl = config.adminPortalUrl;
+        this.providerPortalUrl = config.providerPortalUrl;
     }
 
-    async navigate(path: string = '') {
-        await this.page.goto(`${this.baseUrl}${path}`);
+    async navigateToAdminPortal() {
+        await this.page.goto(this.adminPortalUrl);
+    }
+
+    async navigateToProviderPortal() {
+        await this.page.goto(this.providerPortalUrl);
     }
 
     async waitForElement(selector: string, timeout: number = 10000) {

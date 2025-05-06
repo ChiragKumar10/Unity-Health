@@ -12,6 +12,13 @@ export class AdminLoginPage extends BasePage {
         super(page);
     }
 
+    async navigate() {
+        Logger.step('Navigating to admin portal login page');
+        await this.navigateToAdminPortal();
+        await this.page.waitForLoadState('networkidle');
+        Logger.info('Successfully navigated to admin portal login page');
+    }
+
     async login(username: string, password: string): Promise<void> {
         Logger.step('Attempting to login');
         try {
