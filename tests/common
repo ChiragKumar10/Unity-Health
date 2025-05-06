@@ -1,0 +1,54 @@
+import { test, expect } from '@playwright/test';
+import { LoginPage } from '../../pages/login.page';
+import { Logger } from '../../utils/logger';
+import { Helpers } from '../../utils/helpers';
+
+test.describe('Login Tests', () => {
+    let loginPage: LoginPage;
+
+    test.beforeEach(async ({ page }) => {
+        loginPage = new LoginPage(page);
+        await loginPage.navigate('/auth/login');
+        Logger.info('Navigated to login page');
+    });
+
+    test('Successful login with valid credentials', async ({ page }) => {
+        Logger.step('Testing successful login');
+        await loginPage.login('superadmin', 'Pass@1234');
+        
+        // Check for successful login by verifying redirect to admin/groups
+        await expect(page).toHaveURL(/.*admin\/groups/);
+        Logger.info('Successfully logged in');
+    });
+
+    test('Failed login with invalid credentials', async ({ page }) => {
+        Logger.step('Testing failed login');
+        await loginPage.login('invalid', 'invalid');
+        
+        // Take screenshot of the error state
+        await Helpers.takeScreenshot(page, 'invalid-login-error');
+        
+        // Get the current URL to verify we're still on the login page
+        const currentUrl = page.url();
+        expect(currentUrl).toContain('/auth/login');
+        Logger.info('Failed login test completed');
+    });
+
+    test('Login with empty credentials', async ({ page }) => {
+        Logger.step('Testing login with empty credentials');
+        await loginPage.login('', '');
+        
+        // Take screenshot of the error state
+        await Helpers.takeScreenshot(page, 'empty-credentials-error');
+        
+        // Get the current URL to verify we're still on the login page
+        const currentUrl = page.url();
+        expect(currentUrl).toContain('/auth/login');
+        Logger.info('Empty credentials test completed');
+    });
+
+    test.afterEach(async ({ page }) => {
+        // Take screenshot after each test
+        await Helpers.takeScreenshot(page, 'login-test');
+    });
+}); 
