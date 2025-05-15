@@ -1,0 +1,2 @@
+[STEP] 2025-05-06T11:44:14.548Z - Attempting to login
+[INFO] 2025-05-06T11:44:14.846Z - Login attempt completed

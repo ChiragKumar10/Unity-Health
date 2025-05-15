@@ -1,0 +1,14 @@
+[STEP] 2025-05-06T11:46:38.614Z - Attempting to login to provider portal
+[STEP] 2025-05-06T11:46:38.618Z - Navigating to provider portal login page
+[INFO] 2025-05-06T11:46:40.152Z - Successfully navigated to provider portal login page
+[INFO] 2025-05-06T11:46:40.395Z - Login attempt completed
+[STEP] 2025-05-06T11:46:40.401Z - Starting enrollment navigation test
+[STEP] 2025-05-06T11:46:40.401Z - Navigating to Enrollments section
+[INFO] 2025-05-06T11:46:41.537Z - Successfully navigated to Enrollments section
+[STEP] 2025-05-06T11:46:41.538Z - Checking if Add Enrollment button is visible
+[INFO] 2025-05-06T11:46:41.652Z - Add Enrollment button is visible
+[STEP] 2025-05-06T11:46:41.656Z - Clicking Add Enrollment button
+[STEP] 2025-05-06T11:46:41.656Z - Checking if Add Enrollment button is visible
+[INFO] 2025-05-06T11:46:41.695Z - Add Enrollment button is visible
+[INFO] 2025-05-06T11:46:42.056Z - Add Enrollment form opened
+[INFO] 2025-05-06T11:46:42.061Z - Enrollment navigation test completed successfully

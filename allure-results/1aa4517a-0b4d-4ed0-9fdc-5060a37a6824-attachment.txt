@@ -1,0 +1,24 @@
+[STEP] 2025-05-06T11:46:37.071Z - Setting up test environment
+[STEP] 2025-05-06T11:46:37.181Z - Navigating to admin portal login page
+[INFO] 2025-05-06T11:46:39.216Z - Successfully navigated to admin portal login page
+[STEP] 2025-05-06T11:46:39.216Z - Attempting to login
+[INFO] 2025-05-06T11:46:39.519Z - Login attempt completed
+[STEP] 2025-05-06T11:46:39.523Z - Navigating to Admin Users section
+[INFO] 2025-05-06T11:46:41.602Z - Successfully navigated to Admin Users section
+[STEP] 2025-05-06T11:46:41.606Z - Starting admin user management test
+[STEP] 2025-05-06T11:46:41.606Z - Clicking Add Admin User button
+[INFO] 2025-05-06T11:46:41.770Z - Add Admin User form opened
+[STEP] 2025-05-06T11:46:41.771Z - Filling Admin User form
+[INFO] 2025-05-06T11:46:44.792Z - Admin User form filled successfully
+[STEP] 2025-05-06T11:46:44.793Z - Saving Admin User
+[INFO] 2025-05-06T11:46:45.695Z - Admin User saved successfully
+[STEP] 2025-05-06T11:46:45.697Z - Verifying Admin User in list
+[INFO] 2025-05-06T11:46:46.746Z - Admin User with email test1746531995836@example.com found in list
+[INFO] 2025-05-06T11:46:46.854Z - Successfully clicked action button for user test1746531995836@example.com
+[STEP] 2025-05-06T11:46:47.874Z - Deleting Admin User
+[STEP] 2025-05-06T11:46:51.622Z - Navigating to Admin Users section
+[INFO] 2025-05-06T11:46:51.913Z - Successfully navigated to Admin Users section
+[INFO] 2025-05-06T11:46:51.913Z - Admin User with email test1746531995836@example.com deleted successfully
+[STEP] 2025-05-06T11:46:51.913Z - Verifying Admin User in list
+[INFO] 2025-05-06T11:46:56.156Z - Admin User with email test1746531995836@example.com not found in list
+[INFO] 2025-05-06T11:46:56.158Z - Admin user management test completed successfully

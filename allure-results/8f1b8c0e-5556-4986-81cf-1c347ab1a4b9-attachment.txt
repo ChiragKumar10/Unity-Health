@@ -1,0 +1,12 @@
+[STEP] 2025-05-06T11:44:16.453Z - Attempting to login to provider portal
+[STEP] 2025-05-06T11:44:16.453Z - Navigating to provider portal login page
+[INFO] 2025-05-06T11:44:17.997Z - Successfully navigated to provider portal login page
+[INFO] 2025-05-06T11:44:18.141Z - Login attempt completed
+[STEP] 2025-05-06T11:44:18.142Z - Starting patient chart navigation test
+[STEP] 2025-05-06T11:44:18.142Z - Navigating to Enrollments section
+[INFO] 2025-05-06T11:44:19.165Z - Successfully navigated to Enrollments section
+[STEP] 2025-05-06T11:44:19.166Z - Selecting patient: Automation
+[INFO] 2025-05-06T11:44:20.125Z - Successfully selected patient: Automation
+[STEP] 2025-05-06T11:44:20.125Z - Getting patient name from chart
+[INFO] 2025-05-06T11:44:21.210Z - Patient name in chart: patient, Automation
+[INFO] 2025-05-06T11:44:21.212Z - Patient chart navigation test completed successfully

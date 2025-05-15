@@ -1,0 +1,14 @@
+[STEP] 2025-05-06T11:44:17.004Z - Attempting to login to provider portal
+[STEP] 2025-05-06T11:44:17.004Z - Navigating to provider portal login page
+[INFO] 2025-05-06T11:44:18.492Z - Successfully navigated to provider portal login page
+[INFO] 2025-05-06T11:44:18.646Z - Login attempt completed
+[STEP] 2025-05-06T11:44:18.649Z - Starting patient chat test
+[STEP] 2025-05-06T11:44:18.650Z - Navigating to Enrollments section
+[INFO] 2025-05-06T11:44:19.587Z - Successfully navigated to Enrollments section
+[STEP] 2025-05-06T11:44:19.587Z - Selecting patient: Automation
+[INFO] 2025-05-06T11:44:20.490Z - Successfully selected patient: Automation
+[STEP] 2025-05-06T11:44:20.490Z - Getting patient name from chart
+[INFO] 2025-05-06T11:44:21.991Z - Patient name in chart: patient, Automation
+[STEP] 2025-05-06T11:44:21.995Z - Sending chat message: Hello, this is a test message
+[INFO] 2025-05-06T11:44:23.933Z - Message sent successfully
+[INFO] 2025-05-06T11:44:23.933Z - Patient chat test completed successfully

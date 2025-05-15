@@ -1,0 +1,4 @@
+[STEP] 2025-05-06T11:46:39.846Z - Attempting to login to provider portal
+[STEP] 2025-05-06T11:46:39.848Z - Navigating to provider portal login page
+[INFO] 2025-05-06T11:46:41.270Z - Successfully navigated to provider portal login page
+[INFO] 2025-05-06T11:46:41.520Z - Login attempt completed
