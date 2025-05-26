@@ -5,7 +5,6 @@ import { ProviderEnrollmentsPage } from '../../pages/provider-portal/enrollments
 
 // Test patient name
 const testPatientName = 'Automation';
-console.log('testPatientName', testPatientName);
 
 test.describe('Provider Portal Vitals', () => {
   let loginPage: ProviderLoginPage;

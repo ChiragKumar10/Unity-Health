@@ -10,7 +10,7 @@ export class ProviderEnrollmentsPage extends BasePage {
     private readonly patientNameLink = '//div[@class="MuiBox-root css-uiztjl"]';
     private readonly patientChartName = '//h5[@class="MuiTypography-root MuiTypography-h5 css-1yaslnx"]';
     private readonly chatInput = '//textarea[@placeholder="Type your message..."]';
-    private readonly sendMessageButton = '//button[@class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1ox5szl"]';
+    private readonly sendMessageButton = "//*[name()='svg' and @data-testid='SendIcon']";
 
     constructor(page: Page) {
         super(page);
@@ -89,9 +89,16 @@ export class ProviderEnrollmentsPage extends BasePage {
     async sendChatMessage(message: string): Promise<void> {
         Logger.step(`Sending chat message: ${message}`);
         try {
+            // Wait for chat input to be visible
             await this.page.waitForSelector(this.chatInput, { state: 'visible', timeout: 10000 });
             await this.page.fill(this.chatInput, message);
-            await this.page.click(this.sendMessageButton);
+            
+            // Wait for send button to be visible
+            const sendButton = this.page.locator(this.sendMessageButton);
+            await sendButton.waitFor({ state: 'visible', timeout: 10000 });
+            
+            // Click the button
+            await sendButton.click();
             await this.page.waitForLoadState('networkidle');
             Logger.info('Message sent successfully');
         } catch (error) {
